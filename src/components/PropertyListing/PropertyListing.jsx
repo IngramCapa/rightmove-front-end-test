@@ -15,7 +15,6 @@ const PropertyListing = () => {
     }, []);
     return (
         <div className="property-listing-container">
-            <h2 id="property-list-heading">Properties</h2>
             <ul className="property-listing" aria-labelledby="property-list-heading">
                 {properties.map((property, index) => (
                     <li key={index}>
