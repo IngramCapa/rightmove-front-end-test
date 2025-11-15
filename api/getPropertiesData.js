@@ -10,6 +10,6 @@ export const getPropertiesData = async () => {
         return data;
     } catch (error) {
         console.error(`Error fetching properties:`, error);
-        return [];
+        throw error;
     }
 };

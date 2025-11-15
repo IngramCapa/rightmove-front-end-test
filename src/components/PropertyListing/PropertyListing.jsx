@@ -49,7 +49,14 @@ const PropertyListing = () => {
                     <h2 id="property-list-heading" style={{ textAlign: 'center', marginBottom: '1rem' }}>
                         Properties
                     </h2>
-                    <ul className="property-listing">
+                    <ul
+                        style={{
+                            listStyle: 'none',
+                            padding: 0,
+                            margin: 0,
+                        }}
+                        className="property-listing"
+                    >
                         {properties.map((property, index) => (
                             <li key={index}>
                                 <PropertyCard {...property} />
