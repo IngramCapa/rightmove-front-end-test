@@ -7,9 +7,11 @@ const PropertyListing = () => {
     const [properties, setProperties] = useState([]);
 
     useEffect(() => {
-        getPropertiesData()
-            .then((data) => setProperties(data))
-            .catch((err) => console.error(err));
+        const fetchData = async () => {
+            setProperties(await getPropertiesData());
+        };
+
+        fetchData();
     }, []);
     return (
         <ul className="PropertyListing">
