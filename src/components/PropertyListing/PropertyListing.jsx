@@ -14,13 +14,16 @@ const PropertyListing = () => {
         fetchData();
     }, []);
     return (
-        <ul className="PropertyListing">
-            {properties.map((property, index) => (
-                <li key={index}>
-                    <PropertyCard {...property} />
-                </li>
-            ))}
-        </ul>
+        <div className="property-listing-container">
+            <h2 id="property-list-heading">Properties</h2>
+            <ul className="property-listing" aria-labelledby="property-list-heading">
+                {properties.map((property, index) => (
+                    <li key={index}>
+                        <PropertyCard {...property} />
+                    </li>
+                ))}
+            </ul>
+        </div>
     );
 };
 
